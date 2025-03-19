@@ -1096,3 +1096,11 @@ section .container {
     transform: translateX(-50%);
   }
 }
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  .container {
+    width: 90%;
+  }
+}
