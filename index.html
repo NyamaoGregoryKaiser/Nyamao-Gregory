@@ -393,101 +393,288 @@
   </section>
   <!-- End Experience Section -->
 
-  <!-- Start Project Section -->
-  <section id="portfolio" class="portfolio">
-    <div class="container">
-      <div class="section-title">
-        <h2>Projects</h2>
-        <p>Explore my portfolio of web applications, software projects, and development work</p>
-      </div>
+<!-- Start Project Section -->
+<section id="portfolio" class="portfolio">
+  <div class="container">
+    <div class="section-title">
+      <h2>Projects</h2>
+      <p>Explore my portfolio of web applications, software projects, and development work</p>
+    </div>
 
-      <div class="row">
-        <div class="col-lg-12 d-flex justify-content-center">
-          <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">Web-App</li>
-            <li data-filter=".filter-project">Project</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="row portfolio-container">
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <center><h4>Tour Kenya</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/Tour.jpeg" class="img-fluid" alt="Tour Kenya web application screenshot">
-            <div class="portfolio-info">
-              <h4>Tour Kenya - Travel Web Application</h4>
-              <p>A comprehensive travel platform showcasing Kenya's tourist destinations</p>
-              <div class="portfolio-links">
-                <a href="projects/Tour.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Tour Kenya Project Details"><i class="bx bx-info-circle"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <center><h4>Resume Builder</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/Resume.jpeg" class="img-fluid" alt="Resume Builder application screenshot">
-            <div class="portfolio-info">
-              <h4>Resume Builder Web Application</h4>
-              <p>Interactive tool to create professional resumes with customizable templates</p>
-              <div class="portfolio-links">
-                <a href="projects/resume.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Resume Builder Project Details"><i class="bx bx-info-circle"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <center><h4>Football Gallery</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/Football.jpeg" class="img-fluid" alt="Football Gallery web application screenshot">
-            <div class="portfolio-info">
-              <h4>Football Gallery Platform</h4>
-              <p>Interactive gallery featuring football highlights and statistics</p>
-              <div class="portfolio-links">
-                <a href="projects/Football.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Football Gallery Project Details"><i class="bx bx-info-circle"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-          <center><h4>Court Management System</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/Law.jpeg" class="img-fluid" alt="Court Management System screenshot">
-            <div class="portfolio-info">
-              <h4>Court Case Management System</h4>
-              <p>Digital solution for streamlining court case processing and management</p>
-              <div class="portfolio-links">
-                <a href="projects/Court.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox"
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <br>
-          <center><h4>Tech Blog</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/blog.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <div class="portfolio-links">
-                <a href="projects/blog.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-        
+    <div class="row">
+      <div class="col-lg-12 d-flex justify-content-center">
+        <ul id="portfolio-flters">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-app">Web-App</li>
+          <li data-filter=".filter-project">Project</li>
+          <li data-filter=".filter-vercel">Vercel</li>
+        </ul>
       </div>
     </div>
-  </section>
 
-  <!-- End Project Section -->
+    <div class="row portfolio-container" id="portfolio-container">
+      <!-- Loading indicator -->
+      <div id="loading-indicator" class="col-12 text-center py-5">
+        <div class="spinner-border text-primary" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <p class="mt-2">Loading projects...</p>
+      </div>
+      
+      <!-- Static projects start (initially hidden) -->
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="display: none;">
+        <center><h4>Tour Kenya</h4></center>
+        <div class="portfolio-wrap">
+          <img src="assets/img/project/Tour.jpeg" class="img-fluid" alt="Tour Kenya web application screenshot">
+          <div class="portfolio-info">
+            <h4>Tour Kenya - Travel Web Application</h4>
+            <p>A comprehensive travel platform showcasing Kenya's tourist destinations</p>
+            <div class="portfolio-links">
+              <a href="projects/Tour.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Tour Kenya Project Details"><i class="bx bx-info-circle"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="display: none;">
+        <center><h4>Resume Builder</h4></center>
+        <div class="portfolio-wrap">
+          <img src="assets/img/project/Resume.jpeg" class="img-fluid" alt="Resume Builder application screenshot">
+          <div class="portfolio-info">
+            <h4>Resume Builder Web Application</h4>
+            <p>Interactive tool to create professional resumes with customizable templates</p>
+            <div class="portfolio-links">
+              <a href="projects/resume.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Resume Builder Project Details"><i class="bx bx-info-circle"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="display: none;">
+        <center><h4>Football Gallery</h4></center>
+        <div class="portfolio-wrap">
+          <img src="assets/img/project/Football.jpeg" class="img-fluid" alt="Football Gallery web application screenshot">
+          <div class="portfolio-info">
+            <h4>Football Gallery Platform</h4>
+            <p>Interactive gallery featuring football highlights and statistics</p>
+            <div class="portfolio-links">
+              <a href="projects/Football.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Football Gallery Project Details"><i class="bx bx-info-circle"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="display: none;">
+        <center><h4>Court Management System</h4></center>
+        <div class="portfolio-wrap">
+          <img src="assets/img/project/Law.jpeg" class="img-fluid" alt="Court Management System screenshot">
+          <div class="portfolio-info">
+            <h4>Court Case Management System</h4>
+            <p>Digital solution for streamlining court case processing and management</p>
+            <div class="portfolio-links">
+              <a href="projects/Court.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Court Management System Details"><i class="bx bx-info-circle"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Static projects end -->
+
+      <!-- Vercel projects will be injected here -->
+    </div>
+  </div>
+</section>
+<!-- End Project Section -->
+
+<script>
+ // Enhanced Vercel API integration with improved image loading
+ document.addEventListener('DOMContentLoaded', function() {
+  initializePortfolio();
+});
+
+function initializePortfolio() {
+  // Show loading indicator
+  document.getElementById('loading-indicator').style.display = 'block';
+  
+  // Hide all existing portfolio items during loading
+  const existingItems = document.querySelectorAll('.portfolio-item');
+  existingItems.forEach(item => item.style.display = 'none');
+  
+  // Fetch Vercel projects
+  fetchVercelProjects()
+    .then(() => {
+      // Hide loading indicator
+      document.getElementById('loading-indicator').style.display = 'none';
+      
+      // Show all portfolio items
+      const allItems = document.querySelectorAll('.portfolio-item');
+      allItems.forEach(item => item.style.display = 'block');
+      
+      // Initialize or reinitialize isotope
+      initIsotope();
+    })
+    .catch(error => {
+      console.error('Error in portfolio initialization:', error);
+      // Hide loading indicator and show static projects on error
+      document.getElementById('loading-indicator').style.display = 'none';
+      existingItems.forEach(item => item.style.display = 'block');
+      
+      // Initialize isotope with static projects only
+      initIsotope();
+    });
+}
+
+function initIsotope() {
+  if (typeof jQuery !== 'undefined' && jQuery.fn.isotope) {
+    // Destroy any existing isotope instance
+    const $container = jQuery('.portfolio-container');
+    if ($container.data('isotope')) {
+      $container.isotope('destroy');
+    }
+    
+    // Initialize isotope after images are loaded
+    imagesLoaded(document.querySelector('.portfolio-container'), function() {
+      $container.isotope({
+        itemSelector: '.portfolio-item',
+        layoutMode: 'fitRows'
+      });
+      
+      // Make sure filter works
+      jQuery('#portfolio-flters li').on('click', function() {
+        jQuery('#portfolio-flters li').removeClass('filter-active');
+        jQuery(this).addClass('filter-active');
+        
+        $container.isotope({
+          filter: jQuery(this).data('filter')
+        });
+      });
+    });
+  }
+}
+
+async function fetchVercelProjects() {
+  const VERCEL_TOKEN = 'NQVabBQaSmvqXdEh09fMVAwX'; // Replace with your actual token
+  const portfolioContainer = document.getElementById('portfolio-container');
+  
+  try {
+    // First, fetch all projects
+    const projectsResponse = await fetch('https://api.vercel.com/v9/projects', {
+      headers: {
+        'Authorization': `Bearer ${VERCEL_TOKEN}`
+      }
+    });
+    
+    if (!projectsResponse.ok) {
+      throw new Error('Failed to fetch Vercel projects');
+    }
+    
+    const projectsData = await projectsResponse.json();
+    
+    if (projectsData.projects && projectsData.projects.length > 0) {
+      // Process projects sequentially
+      for (const project of projectsData.projects) {
+        await processProject(project, VERCEL_TOKEN, portfolioContainer);
+      }
+    }
+  } catch (error) {
+    console.error('Error fetching Vercel projects:', error);
+    throw error;
+  }
+}
+
+async function processProject(project, token, container) {
+  try {
+    // Get the latest deployment for the project
+    const deploymentsResponse = await fetch(`https://api.vercel.com/v6/deployments?projectId=${project.id}&limit=1&state=READY`, {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    });
+    
+    if (!deploymentsResponse.ok) {
+      console.error(`Failed to fetch deployments for project ${project.name}`);
+      return;
+    }
+    
+    const deploymentsData = await deploymentsResponse.json();
+    
+    // Get project details
+    let description = project.framework || 'Custom Project';
+    let projectUrl = '';
+    let mainDomain = '';
+    
+    if (deploymentsData.deployments && deploymentsData.deployments.length > 0) {
+      const deployment = deploymentsData.deployments[0];
+      
+      // Add commit message to description if available
+      if (deployment.meta && deployment.meta.githubCommitMessage) {
+        description += ` - ${deployment.meta.githubCommitMessage.substring(0, 50)}${deployment.meta.githubCommitMessage.length > 50 ? '...' : ''}`;
+      }
+      
+      // Get the main domain for the project
+      if (project.alias && project.alias.length > 0) {
+        mainDomain = project.alias[0];
+        projectUrl = `https://${mainDomain}`;
+      } else if (deployment.url) {
+        mainDomain = deployment.url;
+        projectUrl = `https://${mainDomain}`;
+      } else {
+        mainDomain = `${project.name}.vercel.app`;
+        projectUrl = `https://${mainDomain}`;
+      }
+    } else {
+      mainDomain = `${project.name}.vercel.app`;
+      projectUrl = `https://${mainDomain}`;
+    }
+    
+    // Create project element with iframe for live preview
+    const projectElement = document.createElement('div');
+    projectElement.className = 'col-lg-4 col-md-6 portfolio-item filter-vercel';
+    projectElement.style.display = 'none';
+    
+    // Create a loading placeholder for the iframe
+    const placeholderImage = `
+      <div class="iframe-placeholder" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background-color: #f5f5f5; display: flex; justify-content: center; align-items: center;">
+        <div class="spinner-border text-primary" role="status">
+          <span class="sr-only">Loading ${project.name}...</span>
+        </div>
+        <p style="position: absolute; bottom: 10px; width: 100%; text-align: center;">Loading ${project.name}...</p>
+      </div>
+    `;
+    
+    projectElement.innerHTML = `
+      <center><h4>${project.name}</h4></center>
+      <div class="portfolio-wrap">
+        <div class="iframe-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+          ${placeholderImage}
+          <iframe 
+            src="${projectUrl}" 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; opacity: 0; transition: opacity 0.5s ease;"
+            onload="this.style.opacity = 1; this.previousElementSibling.style.display = 'none';"
+            onerror="this.style.display = 'none'; this.previousElementSibling.innerHTML = '<div style=\'display: flex; justify-content: center; align-items: center; height: 100%; flex-direction: column;\'><i class=\'bx bx-error-circle\' style=\'font-size: 2rem; color: #dc3545;\'></i><p>Unable to load preview</p></div>';"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin"
+          ></iframe>
+        </div>
+        <div class="portfolio-info">
+          <h4>${project.name}</h4>
+          <p>${description}</p>
+          <div class="portfolio-links">
+            <a href="${projectUrl}" target="_blank" title="Visit Project"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+      </div>
+    `;
+    
+    container.appendChild(projectElement);
+    
+  } catch (error) {
+    console.error(`Error processing project ${project.name}:`, error);
+  }
+}
+</script>
+
+<!-- Add imagesLoaded library if not already included -->
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
 
   <!-- Start Skills Section -->
