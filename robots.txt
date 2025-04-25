@@ -1,3 +1,4 @@
 User-agent: *
 Disallow:
 Sitemap: https://nyamao.xyz/sitemap.xml
+Sitemap: https://nyamao.me/sitemap.xml
